@@ -62,10 +62,8 @@ import java.util.Set;
 /**
  * Configures maven environment to use within a pipeline job by calling <code>sh mvn</code> or <code>bat mvn</code>.
  * The selected maven installation will be configured and prepended to the path.
- *
  */
 public class WithMavenStep extends Step {
-
 
     private String tempBinDir = "";
     private String mavenSettingsConfig;
@@ -78,7 +76,7 @@ public class WithMavenStep extends Step {
     private String mavenLocalRepo = "";
     private List<MavenPublisher> options = new ArrayList<>();
     private MavenPublisherStrategy publisherStrategy = MavenPublisherStrategy.IMPLICIT;
-    private boolean traceability = true;
+    private boolean traceability = false;
 
     @DataBoundConstructor
     public WithMavenStep() {
