@@ -2,7 +2,7 @@
 # Container for running Jenkins builds using Git
 #
 
-FROM ubuntu:bionic
+FROM ubuntu:jammy
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
